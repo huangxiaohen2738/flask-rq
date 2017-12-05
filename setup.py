@@ -23,6 +23,7 @@ setup(
     description="Flask RQ",
     url="https://github.com/huangxiaohen2738/flask-rq",
     download_url="https://github.com/huangxiaohen2738/flask-rq",
+    author="huangxiaohen",
     author_email="huangxiaohen2738@gmail.com",
     py_modules=["flask_rq"],
     install_requires=install_requires,
