@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/huangxiaohen2738/flask-rq.svg?branch=master)](https://travis-ci.org/huangxiaohen2738/flask-rq)
-[![Coverage Status](https://coveralls.io/repos/github/huangxiaohen2738/flask-rq/badge.svg)](https://coveralls.io/github/huangxiaohen2738/flask-rq)
 
 # Flask-RQ
 flask-rq
