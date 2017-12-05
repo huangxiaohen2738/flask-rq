@@ -41,14 +41,15 @@ scheduler.start_cron_jobs()
 
 
 #### Config
-```
+```python
 REDIS_HOST = "localhost"
 REDIS_PORT = 6379
 REDIS_PASSWORD = "password"
 REDIS_DB = 0
 RQ_DEBUG = False
 SENTRY_DSN = ""
-RQ_STATSD_ENABLED = True  // report status(need stastd); If you don't want to use it, set False
+# report status(need stastd); If you don't want to use it, set False
+RQ_STATSD_ENABLED = True  
 RQ_STATSD_PORT = 8125
 RQ_REPORT_RATE = 0.1
 RQ_DEFAULT_WORKER_TTL = 420
