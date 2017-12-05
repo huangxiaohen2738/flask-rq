@@ -8,7 +8,7 @@ flask-rq
 #### Create
 
 ```python
-from lyqr import create_rq
+from flask_rq import create_rq
 
 rqueue, scheduler = create_rq("some-name-space")
 ```
