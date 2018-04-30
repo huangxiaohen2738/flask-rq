@@ -19,7 +19,7 @@ install_requires = [
 
 setup(
     name="Flask-RQ",
-    version="0.1.0",
+    version="0.1.1",
     description="Flask RQ",
     url="https://github.com/huangxiaohen2738/flask-rq",
     download_url="https://github.com/huangxiaohen2738/flask-rq",
