@@ -24,7 +24,7 @@ def test_config(app):
 def test_init(app, admin):
     from flask_rq import create_rq
 
-    rqueue, scheduler = create_rq("test")
+    _, rqueue, scheduler = create_rq("test")
 
     scheduler.init_app(app)
     rqueue.init_app(app, admin)
