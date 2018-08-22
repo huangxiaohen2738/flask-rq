@@ -19,3 +19,4 @@ def test_init(app, admin):
 
     manager, rqueue, scheduler = create_rq("test")
     manager.init_app(app)
+    manager.init_admin(app, admin)
