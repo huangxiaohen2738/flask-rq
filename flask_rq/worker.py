@@ -10,7 +10,7 @@ from .constants import HOSTNAME
 logger = logging.getLogger(__name__)
 
 
-class FLaskWorker(SimpleWorker):
+class FlaskWorker(SimpleWorker):
     def timing(self, name, value):
         manager.stats.timing(name, value)
 
