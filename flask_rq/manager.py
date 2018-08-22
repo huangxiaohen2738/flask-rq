@@ -50,22 +50,22 @@ class RQManager(object):
 
     def init_app(self, app):
         pool = ConnectionPool(
-            host=app.config["LYRQ_HOST"],
-            port=app.config.get("LYRQ_PORT", 6379),
-            password=app.config.get("LYRQ_PASSWORD"),
-            db=app.config.get("LYRQ_DB", 0)
+            host=app.config["RQ_HOST"],
+            port=app.config.get("RQ_PORT", 6379),
+            password=app.config.get("RQ_PASSWORD"),
+            db=app.config.get("RQ_DB", 0)
         )
         connection = StrictRedis(connection_pool=pool)
         logger.info("connected to {0}".format(connection))
         self._connection = connection
         self._sentry_dsn = app.config.get("SENTRY_DSN")
 
-        self._debug = app.config.get("LYRQ_DEBUG", False)
-        self._scheduler_interval = app.config.get("LYRQ_SCHEDULER_INTERVAL")
-        self._job_ttl = app.config.get("LYRQ_JOB_TTL")
-        self._result_ttl = app.config.get("LYRQ_RESULT_TTL")
-        self._worker_ttl = app.config.get("LYRQ_WORKER_TTL")
-        self._worker_timeout = app.config["LYRQ_WORKER_TIMEOUT"]
+        self._debug = app.config.get("RQ_DEBUG", False)
+        self._scheduler_interval = app.config.get("RQ_SCHEDULER_INTERVAL")
+        self._job_ttl = app.config.get("RQ_JOB_TTL")
+        self._result_ttl = app.config.get("RQ_RESULT_TTL")
+        self._worker_ttl = app.config.get("RQ_WORKER_TTL")
+        self._worker_timeout = app.config["RQ_WORKER_TIMEOUT"]
 
     def init_admin(self, app, admin):
         dashboard.init(app, admin, self.connection)

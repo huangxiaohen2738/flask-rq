@@ -1,6 +1,6 @@
 from .manager import manager
 from .scheduler import Scheduler
-from .worker import RQ
+from .flask_rq import RQ
 
 
 def create_rq(namespace):
