@@ -72,7 +72,7 @@ class RQ(object):
         )
 
         if manager.sentry_dsn:
-            client = Client(self.sentry_dsn)
+            client = Client(manager.sentry_dsn)
             register_sentry(client, worker)
 
         worker.work(burst=False, logging_level=logging_level)
